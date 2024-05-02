@@ -1,0 +1,9 @@
+# .env file (contains OpenAI APIKEY)
+.env
+
+# local
+local/*
+
+# jupyter: ignore all but ipynb
+jupyter/notebooks/*
+!jupyter/notebooks/*.ipynb

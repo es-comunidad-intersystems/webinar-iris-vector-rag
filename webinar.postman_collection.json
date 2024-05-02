@@ -1,0 +1,50 @@
+{
+	"info": {
+		"_postman_id": "9c2e56d7-2383-4c8c-af60-381512bf11db",
+		"name": "Webinar IRIS Vector RAG",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8116712"
+	},
+	"item": [
+		{
+			"name": "Similar Desc Search",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "demo",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "demo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:52773/winereview?description=citric flavors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "52773",
+					"path": [
+						"winereview"
+					],
+					"query": [
+						{
+							"key": "description",
+							"value": "citric flavors"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,17 @@
+{
+    "files.associations": {
+        "iris.script": "objectscript"
+    },
+    "objectscript.conn": {
+        "active": true,
+        "ns": "USER",
+        "host": "localhost",
+        "port": 52773,
+        "username": "demo",
+        "password": "demo",
+        "links": {
+            "SOAP Wizard": "${serverUrl}/isc/studio/templates/%25ZEN.Template.AddInWizard.SOAPWizard.cls?Namespace=${namespace}${serverAuth}",
+            "WebTerminal": "${serverUrl}/terminal/"
+        }
+    },
+}

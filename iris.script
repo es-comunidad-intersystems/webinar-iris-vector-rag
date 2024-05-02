@@ -1,0 +1,22 @@
+    // unexpire passwords for dev mode
+    new $namespace
+    set $namespace = "%SYS"
+    do ##class(Security.Users).UnExpireUserPasswords("*")
+
+    // enable callin service for connecting to iris from python scripts
+    zn "%SYS"
+    set callin=##class(Security.Services).%OpenId("%service_callin")
+    set callin.Enabled=1
+    do callin.%Save()
+
+    // import web applications (used for REST service)
+    set $namespace = "%SYS"
+    do ##class(Security.Applications).Import("/opt/irisapp/install/webapps.xml")
+
+    // install webterminal using zpm
+    zpm "install webterminal"
+
+    // load & compile source code
+    //set sc = $SYSTEM.OBJ.LoadDir("/opt/irisapp/src", "ck", .errorlog, 1)
+
+    halt
