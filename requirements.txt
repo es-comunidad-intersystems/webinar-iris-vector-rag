@@ -2,3 +2,6 @@ pandas
 python-dotenv
 openai
 sentence-transformers
+langchain-iris
+langchain
+tiktoken

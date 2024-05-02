@@ -27,19 +27,65 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:52773/winereview?description=citric flavors",
+					"raw": "http://localhost:52773/winereview/similar?description=citric flavors",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "52773",
 					"path": [
-						"winereview"
+						"winereview",
+						"similar"
 					],
 					"query": [
 						{
 							"key": "description",
 							"value": "citric flavors"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "WikiCervantes QA",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "demo",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "demo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:52773/wikicervantes/qa?question=¿Cervantes participó en alguna batalla?&k=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "52773",
+					"path": [
+						"wikicervantes",
+						"qa"
+					],
+					"query": [
+						{
+							"key": "question",
+							"value": "¿Cervantes participó en alguna batalla?"
+						},
+						{
+							"key": "k",
+							"value": "5"
 						}
 					]
 				}

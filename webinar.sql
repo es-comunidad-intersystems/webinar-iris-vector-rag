@@ -31,6 +31,11 @@ SELECT webinar_data.WineReviews_GetEncoding('citrus flavors')
 -- try: blackberry, walnut, citrus flavors
 SELECT TOP 5 uid, country, designation, region, variety, description FROM webinar_data.WineReviews 
 WHERE country in ('Spain', 'France') 
-ORDER BY VECTOR_DOT_PRODUCT(description_vector, TO_VECTOR(webinar_data.WineReviews_GetEncoding('citrus flavors'))) DESC
+ORDER BY VECTOR_DOT_PRODUCT(description_vector, TO_VECTOR(webinar_data.WineReviews_GetEncoding('walnut'))) DESC
+
+
+
+SELECT *
+FROM SQLUser.wikicervantes
 
 
