@@ -51,7 +51,7 @@ CREATE TABLE webinar_data.WineReviews (
 )
 ```
 
-## Cargar datos de prueba
+## Cargar datos de prueba
 
 Cargamos a continuación los CSV de prueba. Utilizamos la funcionalidad [LOAD DATA](https://docs.intersystems.com/iris20241/csp/docbook/Doc.View.cls?KEY=RSQL_loaddata) que directamente nos ahorra muchísimo trabajo 🙂 
 
@@ -71,7 +71,7 @@ GROUP BY country
 ORDER BY count(*) DESC
 ```
 
-## Calcular Vectores (encoding) para los datos de prueba
+## Calcular Vectores (encoding) para los datos de prueba
 
 Como has podido ver, la columna "description_vector" está vacía. No tenemos vectores calculados aún.
 
