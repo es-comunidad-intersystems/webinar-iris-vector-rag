@@ -12,6 +12,8 @@ services:
     environment:
       IRIS_USERNAME: demo
       IRIS_PASSWORD: demo
+    command:
+      --key /app/iris.key
     ports:
     - "52773:52773"
     - "1972:1972"
@@ -20,9 +22,8 @@ services:
     - .env:/home/irisowner/.env
 
   jupyter:
+    image: jupyter/minimal-notebook
     container_name: jupyter
-    build:
-      context: jupyter
     ports: 
       - "8888:8888"
     environment: 

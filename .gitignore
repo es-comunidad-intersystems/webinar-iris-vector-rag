@@ -1,6 +1,9 @@
 # .env file (contains OpenAI APIKEY)
 .env
 
+# licenses
+iris.key
+
 # local
 local/*
 
