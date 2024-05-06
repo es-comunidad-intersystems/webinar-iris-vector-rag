@@ -22,6 +22,8 @@ USING {"from":{"file":{"header":true, "charset": "UTF-8"}}}
 
 
 -- have a look at the dataset
+SELECT * FROM webinar_data.WineReviews
+
 SELECT country, count(*) total
 FROM webinar_data.WineReviews
 GROUP BY country

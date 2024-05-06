@@ -169,7 +169,43 @@ En [webinar.postman_collection.json](./webinar.postman_collection.json) tienes u
 
 <img src="img/rest-wineservice.png" width="600" />
 
-# Aplicación IA Generativa: combinar LLM con base de datos Vectorial
+# Aplicación IA Generativa sobre tus datos
 
+Seguro que conoces múltiples ejemplos de **LLM (Large Language Models)** como **ChatGPT** (GPT-3.5, GPT-4), **BERT**, **Llama**, etc. Estos modelos se caracterizan entre otras cosas por manejar muy bien lenguajes naturales para comunicarse y por cierta capacidad de "razonamiento" para resolver cuestiones.
+
+Estos LLMs son capaces de recibir **prompts** o instrucciones en forma de lenguaje natural que describe la tarea que una IA debe realizar, por ejemplo:
+
+```
+Clasifica el siguiente texto el neutral, positivo o negativo.
+Texto: las vacaciones han estado bien.
+```
+
+Los modelos LLMs se han entrenado sobre conjuntos enormes de datos y son capaces de responder cuestiones utilizando como base la información de su entrenamiento.
+
+Sería realmente interesante crear aplicaciones sobre nuestros propios datos y que puedan utilizar las capacidades de las LLMs para comprender lenguaje natural y razonar. A esta forma de hacer aplicaciones se la conoce como **RAG (Retrieval Augmented Generation)**.
+
+<img src="img/rag-diagram.png" width="600" />
+
+Para construir aplicaciones RAG con nuestros propios datos necesitamos procesar la información en 2 fases:
+* Carga de documentos - cargar nuestros datos, calculando los *embeddings** (vectores) correspondientes y almacenar en una base de datos vectorial.
+* Procesar una *query* o consulta del usuario
+  * Buscar en la base de datos vectorial los documentos relacionados con esa consulta. Con esos documentos, construimos el "contexto" para resolver la consulta.
+  * Combinar la consulta del usuario y el contexto calculado previamente.
+  * Lanzar la consulta a una LLM indicando que la resuelva utilizando el contexto que facilitamos.
+  * Analizar la respuesta e integrar con el resto de nuestra aplicación.
+
+Vamos a implementar un ejemplo que sea capaz de responder a preguntas sobre un documento. En este caso utilizaremos una versión en [texto](data/wiki-es-cervantes.txt) del artículo de la [Wikipedia](https://es.wikipedia.org/wiki/Miguel_de_Cervantes) sobre Miguel de Cervantes.
+
+## ¿Qué vas a utilizar?
+InterSystems IRIS
+LangChain
+OpenAI
+
+## Prueba en Jupyter
+
+## Implementación como servicio REST en IRIS
+
+
+# ¿Qué más puedo hacer?
 
 
