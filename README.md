@@ -12,6 +12,18 @@ git clone https://github.com/es-comunidad-intersystems/webinar-iris-vector-rag
 cd webinar-iris-vector-rag
 ```
 
+2. Configura tu API key de OpenAI
+
+Necesitarás utilizar servicios de OpenAI para la segunda parte de este webinar.
+
+Si no tienes aún una API Key creada en OpenAI, necesistarás crearte una cuenta y navegar a la sección de API Key y hacer click en "Create new secret key".
+
+Crea un fichero `.env` en la raiz del directorio donde hayas clonado el repositorio con un contenido como este:
+```
+OPENAI_API_KEY="<your-api-key>"
+```
+
+
 2. Inicia la instancia [InterSystems IRIS Community](https://www.intersystems.com/products/intersystems-iris/)
 ```shell
 docker compose up
@@ -197,14 +209,34 @@ Para construir aplicaciones RAG con nuestros propios datos necesitamos procesar 
 Vamos a implementar un ejemplo que sea capaz de responder a preguntas sobre un documento. En este caso utilizaremos una versión en [texto](data/wiki-es-cervantes.txt) del artículo de la [Wikipedia](https://es.wikipedia.org/wiki/Miguel_de_Cervantes) sobre Miguel de Cervantes.
 
 ## ¿Qué vas a utilizar?
-InterSystems IRIS
-LangChain
-OpenAI
+* InterSystems IRIS - Plataforma de datos que utilizarás como base de datos vectorial y también para implementar un servicio REST que explote tu aplicación RAG
+
+* [LangChain](https://www.langchain.com/) - framework que simplifica la creación de aplicaciones utilizando diferentes LLMs como OpenAI. Lo tenemos disponible para Python.
+
+* OpenAI - LLM que utilizarás en el ejemplo.
+
+* Jupyter - sistema de *notebooks* o cuadernos que nos permiten ejecutar Python de forma interactiva, normalmente se utiliza para exploración de datos, pruebas, experimentos, etc.
 
 ## Prueba en Jupyter
 
+En primer lugar utilizarás un cuaderno Jupyter para probar el concepto de aplicación RAG.
+* En http://localhost:8888/lab podrás acceder a Jupyter.
+* Abre el notebook [langchain-rag.ipynb](./jupyter/notebooks/langchain-rag.ipynb)
+
+Si sigues las instrucciones del cuaderno podrás ver:
+* Instalación de librerías Python que necesitarás, incluido LangChain.
+* Carga de documento (recuerda que usábamos el artículo de Cervantes de la Wikpedia) en InterSystems IRIS como vectores
+* Implementación de un pequeña aplicación con LangChain y OpenAI que te permitirá hacer preguntas sobre el documento que hemos cargado.
+
 ## Implementación como servicio REST en IRIS
 
+Después de probar cómo funciona el concepto en Jupyter, tienes un ejemplo de un servicio REST sencillo en IRIS que recoge preguntas de usuarios sobre el documento y envía las respuestas.
+
+Aquí tienes el [código](./src/webinar/api/CervantesService.cls). Compílalo en InterSystems IRIS desde VS Code.
+
+En el proyecto [Postman](./webinar.postman_collection.json) tienes una petición preparada para poder para probarlo.
+
+<img src="img/rest-cervantesservice.png" width="800"/>
 
 # ¿Qué más puedo hacer?
 
