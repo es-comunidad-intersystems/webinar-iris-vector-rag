@@ -68,7 +68,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:52773/wikicervantes/qa?question=¿Cervantes participó en alguna batalla?&k=5",
+					"raw": "http://localhost:52773/wikicervantes/qa?question=¿Por qué Cervantes fue relevante?&k=5",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -81,7 +81,7 @@
 					"query": [
 						{
 							"key": "question",
-							"value": "¿Cervantes participó en alguna batalla?"
+							"value": "¿Por qué Cervantes fue relevante?"
 						},
 						{
 							"key": "k",

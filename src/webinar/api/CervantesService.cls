@@ -92,12 +92,16 @@ ClassMethod AnswerQuestionPython(question As %String, k As %Integer) As %String 
     format_instructions = output_parser.get_format_instructions()
 
     query_template = """\
-    Interprete and evaluate the following question in Spanish: {question}
+    You are a Co-Pilot history teacher that helps students to understand history lessons.
+    Using the context, provide a comprensible and clear response that will help a student to study History.
 
     {format_instructions}
 
     Use the following context:
     {context}
+
+    Question:
+    {question}
 
     Do not use any other information.
     """
