@@ -17,7 +17,4 @@
     set $namespace = "USER"
     zpm "install webterminal"
 
-    // load & compile source code
-    //set sc = $SYSTEM.OBJ.LoadDir("/opt/irisapp/src", "ck", .errorlog, 1)
-
     halt
