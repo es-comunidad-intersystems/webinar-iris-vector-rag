@@ -221,7 +221,7 @@ Vamos a implementar un ejemplo que sea capaz de responder a preguntas sobre un d
 
 <img src="img/diagram-exercise-rag.png" width="1024" />
 
-## ¿Qué vas a utilizar?
+## ¿Qué vas a utilizar?
 * InterSystems IRIS - Plataforma de datos que utilizarás como base de datos vectorial y también para implementar un servicio REST que explote tu aplicación RAG
 
 * [LangChain](https://www.langchain.com/) - framework que simplifica la creación de aplicaciones utilizando diferentes LLMs como OpenAI. Lo tenemos disponible para Python.
@@ -230,7 +230,7 @@ Vamos a implementar un ejemplo que sea capaz de responder a preguntas sobre un d
 
 * Jupyter - sistema de *notebooks* o cuadernos que nos permiten ejecutar Python de forma interactiva, normalmente se utiliza para exploración de datos, pruebas, experimentos, etc.
 
-## Prueba en Jupyter
+## Prueba en Jupyter
 
 En primer lugar utilizarás un cuaderno Jupyter para probar el concepto de aplicación RAG.
 * En http://localhost:8888/lab podrás acceder a Jupyter.
@@ -241,7 +241,7 @@ Si sigues las instrucciones del cuaderno podrás ver:
 * Carga de documento (recuerda que usábamos el artículo de Cervantes de la Wikpedia) en InterSystems IRIS como vectores
 * Implementación de un pequeña aplicación con LangChain y OpenAI que te permitirá hacer preguntas sobre el documento que hemos cargado.
 
-## Implementación como servicio REST en IRIS
+## Implementación como servicio REST en IRIS
 
 Después de probar cómo funciona el concepto en Jupyter, tienes un ejemplo de un servicio REST sencillo en IRIS que recoge preguntas de usuarios sobre el documento y envía las respuestas.
 
