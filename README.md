@@ -1,9 +1,17 @@
-Aquí encontrarás los ejemplos utilizados en el [Webinar - Base de datos Vectorial y Aplicaciones de IA Generativa](https://comunidadintersystems.com/).
+En este repositorio encontrarás el código y los ejemplos utilizados en el [Webinar - Base de datos Vectorial y Aplicaciones de IA Generativa](https://es.community.intersystems.com/post/nuevo-webinar-en-español-base-de-datos-de-vectores-y-rag-aplicaciones-ia-generativa-sobre-tus).
+
+# ¿Qué vas a aprender?
+📍 Con este webinar y siguiendo los ejemplos paso a paso aprenderás:
+
+* Para qué sirve representar información como vectores y qué papel juegan las bases de datos vectoriales
+* Cómo puedes crear aplicaciones RAG *(Retrieval Augmented Generation)* que utilicen LLMs 🤖 (e.g. ChatGPT) que sean capaces de resolver cuestiones utilizando como fuente de información tus propios datos.
+
 
 # ¿Qué necesitas?
-* [Docker](https://www.docker.com/products/docker-desktop) - para ejecutar [InterSystems IRIS Community](https://www.intersystems.com/products/intersystems-iris/).
+* [Docker](https://www.docker.com/products/docker-desktop) - para ejecutar [InterSystems IRIS Community](https://www.intersystems.com/products/intersystems-iris/), la plataforma de datos que utilizaremos para almacenar información y ejecutar código.
+* _Opcionalmente_, cualquier cliente SQL como [DBeaver Community](https://dbeaver.io/download/) capaz de conectar por JDBC. En su defecto, lo podrás hacer por el propio portal web de IRIS.
 * [Postman](https://www.postman.com/downloads/) - para lanzar peticiones REST.
-
+* [API Key de OpenAI](https://openai.com/) -  necesitarás utilizar servicios de OpenAI para la segunda parte de este webinar. Si no tienes aún una API Key creada en OpenAI, créate una cuenta y en la sección "API Key" haz click en "Create new secret key". 
 
 ## Instalación
 1. Clona o descarga el repositorio desde GitHub
@@ -16,8 +24,6 @@ cd webinar-iris-vector-rag
 
 Necesitarás utilizar servicios de OpenAI para la segunda parte de este webinar.
 
-Si no tienes aún una API Key creada en OpenAI, necesistarás crearte una cuenta y navegar a la sección de API Key y hacer click en "Create new secret key".
-
 Crea un fichero `.env` en la raiz del directorio donde hayas clonado el repositorio con un contenido como este:
 ```
 OPENAI_API_KEY="<your-api-key>"
@@ -29,12 +35,17 @@ OPENAI_API_KEY="<your-api-key>"
 docker compose up
 ```
 
+⚠️ _¡Importante!_ la construcción de la imagen tardará unos minutos porque tiene que descargar varias dependencias de librerías Python 🐍
+
 3. Con la instancia en marcha, podrás acceder al [Mng. Portal](http://localhost:52773/csp/sys/UtilHome.csp)
 * Usuario: `demo`
 * Password: `demo`
 
 
 # Base de Datos Vectorial
+
+<img src="img/diagram-exercise-vectordb.png" width="1024" />
+
 Para esta primera parte cargaremos un conjunto de datos sobre catas de vinos 🍇 originalmente disponible en [Kaggle](https://www.kaggle.com/datasets/zynicide/wine-reviews).
 
 [Aquí](./data) tenemos preparadas unas versiones de 500 y 5K registros para hacer pruebas.
@@ -196,7 +207,7 @@ Los modelos LLMs se han entrenado sobre conjuntos enormes de datos y son capaces
 
 Sería realmente interesante crear aplicaciones sobre nuestros propios datos y que puedan utilizar las capacidades de las LLMs para comprender lenguaje natural y razonar. A esta forma de hacer aplicaciones se la conoce como **RAG (Retrieval Augmented Generation)**.
 
-<img src="img/rag-diagram.png" width="600" />
+<img src="img/rag-diagram-es.png" width="1024" />
 
 Para construir aplicaciones RAG con nuestros propios datos necesitamos procesar la información en 2 fases:
 * Carga de documentos - cargar nuestros datos, calculando los *embeddings** (vectores) correspondientes y almacenar en una base de datos vectorial.
@@ -207,6 +218,8 @@ Para construir aplicaciones RAG con nuestros propios datos necesitamos procesar 
   * Analizar la respuesta e integrar con el resto de nuestra aplicación.
 
 Vamos a implementar un ejemplo que sea capaz de responder a preguntas sobre un documento. En este caso utilizaremos una versión en [texto](data/wiki-es-cervantes.txt) del artículo de la [Wikipedia](https://es.wikipedia.org/wiki/Miguel_de_Cervantes) sobre Miguel de Cervantes.
+
+<img src="img/diagram-exercise-rag.png" width="1024" />
 
 ## ¿Qué vas a utilizar?
 * InterSystems IRIS - Plataforma de datos que utilizarás como base de datos vectorial y también para implementar un servicio REST que explote tu aplicación RAG
@@ -238,6 +251,15 @@ En el proyecto [Postman](./webinar.postman_collection.json) tienes una petición
 
 <img src="img/rest-cervantesservice.png" width="800"/>
 
-# ¿Qué más puedo hacer?
+# Evolucionar Sistemas Existentes
+
+En la práctica, hoy en día las aplicaciones modernas deben:
+* Lidiar con diferentes fuentes de datos: APIs, sistemas _legacy_, diversas bases de datos, etc.
+* Ser capaces de ofrecer una visión unificada, normalizada y de calidad de la información adaptada a los diferentes consumos que se va a hacer de ella por distintos perfiles, usuarios o casos de uso (e.g. análisis, modelos de predicción IA, retro-alimentar sistemas operacionales, etc.)
+
+<img src="img/iris-plataforma-datos.png" width="1024" />
+
+Contar con una plataforma de datos como [InterSystems IRIS](https://www.intersystems.com/es/productos/intersystems-iris/) simplifica muchos de estos retos permitiendo una gestión sencilla de la __persistencia en diferentes modelos__ (¡vectores incluidos!), __interoperabilidad__ con otras aplicaciones y __análisis__ para gobernar la información y adaptarla a cada perfil de consumo que se requiera.
+
 
 
