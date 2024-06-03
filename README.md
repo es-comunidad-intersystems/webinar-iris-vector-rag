@@ -11,7 +11,7 @@ En este repositorio encontrarás el código y los ejemplos utilizados en el [Web
 * [Docker](https://www.docker.com/products/docker-desktop) - para ejecutar [InterSystems IRIS Community](https://www.intersystems.com/products/intersystems-iris/), la plataforma de datos que utilizaremos para almacenar información y ejecutar código.
 * _Opcionalmente_, cualquier cliente SQL como [DBeaver Community](https://dbeaver.io/download/) capaz de conectar por JDBC. En su defecto, lo podrás hacer por el propio portal web de IRIS.
 * [Postman](https://www.postman.com/downloads/) - para lanzar peticiones REST.
-* [API Key de OpenAI](https://openai.com/) -  necesitarás utilizar servicios de OpenAI para la segunda parte de este webinar. Si no tienes aún una API Key creada en OpenAI, créate una cuenta y en la sección "API Key" haz click en "Create new secret key". 
+* [API Key de OpenAI](https://platform.openai.com/api-keys) -  necesitarás utilizar servicios de OpenAI para la segunda parte de este webinar. Si no tienes aún una API Key creada en OpenAI, créate una cuenta y en la sección "API Key" haz click en "Create new secret key". 
 
 ## Instalación
 1. Clona o descarga el repositorio desde GitHub
