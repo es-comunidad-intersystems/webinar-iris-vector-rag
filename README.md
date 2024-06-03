@@ -261,5 +261,4 @@ En la práctica, hoy en día las aplicaciones modernas deben:
 
 Contar con una plataforma de datos como [InterSystems IRIS](https://www.intersystems.com/es/productos/intersystems-iris/) simplifica muchos de estos retos permitiendo una gestión sencilla de la __persistencia en diferentes modelos__ (¡vectores incluidos!), __interoperabilidad__ con otras aplicaciones y __análisis__ para gobernar la información y adaptarla a cada perfil de consumo que se requiera.
 
-
-
+Pásate por la [Comunidad de Desarrolladores](https://community.intersystems.com) 🧑🏻‍💻 y echa un vistazo.
