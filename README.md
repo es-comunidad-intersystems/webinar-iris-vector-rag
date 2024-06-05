@@ -251,7 +251,7 @@ En el proyecto [Postman](./webinar.postman_collection.json) tienes una petición
 
 <img src="img/rest-cervantesservice.png" width="800"/>
 
-# Evolucionar Sistemas Existentes
+# ¿Cómo evolucionar sistemas para aprovechar estas características?
 
 En la práctica, hoy en día las aplicaciones modernas deben:
 * Lidiar con diferentes fuentes de datos: APIs, sistemas _legacy_, diversas bases de datos, etc.

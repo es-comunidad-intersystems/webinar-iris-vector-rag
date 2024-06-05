@@ -22,7 +22,7 @@ USING {"from":{"file":{"header":true, "charset": "UTF-8"}}}
 
 
 -- have a look at the dataset
-SELECT * FROM webinar_data.WineReviews
+SELECT * FROM webinar_data.WineReviews 
 
 SELECT country, count(*) total
 FROM webinar_data.WineReviews
@@ -35,9 +35,13 @@ SELECT webinar_data.WineReviews_GetEncoding('citrus flavors')
 
 -- run vector search (similarity)
 -- you can try different search strings: blackberry, walnut, citrus flavors
-SELECT TOP 5 uid, country, designation, region, variety, description FROM webinar_data.WineReviews 
+SELECT TOP 5 uid, country, designation, region, variety, description 
+FROM webinar_data.WineReviews 
 WHERE country in ('Spain', 'France') 
-ORDER BY VECTOR_DOT_PRODUCT(description_vector, TO_VECTOR(webinar_data.WineReviews_GetEncoding('walnut'))) DESC
+ORDER BY 
+VECTOR_DOT_PRODUCT(description_vector,
+TO_VECTOR(webinar_data.WineReviews_GetEncoding('citrus flavors')))
+DESC
 
 
 -- table where wiki cervantes documents are stored
