@@ -15,7 +15,7 @@ CREATE TABLE webinar_data.WineReviews (
 
 
 -- load dataset from CSV
-LOAD DATA FROM FILE '/app/data/wine-reviews-5K.csv'
+LOAD DATA FROM FILE '/app/data/wine-reviews-500.csv'
 INTO webinar_data.WineReviews (uid,country,description,designation,points,price,province,region,variety)
 VALUES (num,country,description,designation,points,price,province,region1,variety)
 USING {"from":{"file":{"header":true, "charset": "UTF-8"}}}
