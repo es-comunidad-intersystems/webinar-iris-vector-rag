@@ -253,7 +253,7 @@ En el proyecto [Postman](./webinar.postman_collection.json) tienes una petición
 
 # ¿Cómo evolucionar sistemas para aprovechar estas características?
 
-En la práctica, hoy en día las aplicaciones modernas deben:
+En la práctica, hoy en día muchas aplicaciones modernas tienen que solventar cosas como:
 * Lidiar con diferentes fuentes de datos: APIs, sistemas _legacy_, diversas bases de datos, etc.
 * Ser capaces de ofrecer una visión unificada, normalizada y de calidad de la información adaptada a los diferentes consumos que se va a hacer de ella por distintos perfiles, usuarios o casos de uso (e.g. análisis, modelos de predicción IA, retro-alimentar sistemas operacionales, etc.)
 
