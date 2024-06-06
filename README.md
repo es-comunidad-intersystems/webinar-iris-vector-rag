@@ -210,7 +210,7 @@ Sería realmente interesante crear aplicaciones sobre nuestros propios datos y q
 <img src="img/rag-diagram-es.png" width="1024" />
 
 Para construir aplicaciones RAG con nuestros propios datos necesitamos procesar la información en 2 fases:
-* Carga de documentos - cargar nuestros datos, calculando los *embeddings** (vectores) correspondientes y almacenar en una base de datos vectorial.
+* Carga de documentos - cargar nuestros datos, calculando los *embeddings* (vectores) correspondientes y almacenar en una base de datos vectorial.
 * Procesar una *query* o consulta del usuario
   * Buscar en la base de datos vectorial los documentos relacionados con esa consulta. Con esos documentos, construimos el "contexto" para resolver la consulta.
   * Combinar la consulta del usuario y el contexto calculado previamente.
